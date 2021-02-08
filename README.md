@@ -19,13 +19,13 @@ Para instalar o takenotes, siga estas etapas:
         $username = "root"; // Usuário do banco de dados
         $password = ""; // Senha do banco de dados, deixe em branco caso não haja uma
         $dbname   = "takenotes"; // Nome da tabela do banco de dados
-4. Ache o DEFINER do seu usuário, na tela incial do banco, em utilizador no canto superior direito.
+4. Ache o DEFINER do seu usuário, na tela inicial do banco, em "Utilizador" no canto superior direito.
 5. Adicione a rotina dentro da tabela do projeto.
 --- TUTORIAL
         5¹. Abra o arquivo rotina.txt, dentro da pasta SQL, e copie o código.
         5². Vá até a tabela, no phpMyAdmin, e clique em SQL.
         5³. Cole o código e altere o DEFINER (segunda linha), caso o seu seja diferente.
-            -> CREATE DEFINER=`root`@`localhost` <-
+            -> CREATE DEFINER=`root`@`localhost` <- (exemplo para root@localhost)
 ```
 
 ## ☕ Usando takenotes

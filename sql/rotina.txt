@@ -1,0 +1,17 @@
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` FUNCTION `randomWord`() RETURNS varchar(128) CHARSET utf8mb4
+BEGIN
+
+SET @chars = 'abcdefghijklmnopqrstuvwxyz';
+SET @charLen = length(@chars);
+
+SET @randomWord = '';
+
+WHILE length(@randomWord) < 5
+    DO
+    SET @randomWord = concat(@randomWord, substring(@chars,CEILING(RAND() * @charLen),1));
+END WHILE;
+
+RETURN @randomWord ;
+END$$
+DELIMITER ;
